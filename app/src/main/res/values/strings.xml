@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Área da Preservação Permanente</string>
+    <string name="nome">Nome:</string>
+    <string name="area">Área:</string>
+    <string name="nomePro">Nome da Propriedade:</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="voltar">Voltar</string>
+    <string name="proximo">Proximo</string>
+    <string name="ibge">IBGE(2021)</string>
+    <string name="realizarCalculo">Realizar Calculo</string>
+    <string name="legislacao">Legislação</string>
+    <string name="opcoes">Outras Opções</string>
+
+    <string name="amazonia"> - 80% (oitenta por cento), no imóvel situado em área de florestas;\n" +
+                            "\n" +
+                            "- 35% (trinta e cinco por cento), no imóvel situado em área de cerrado;\n" +
+                            "\n" +
+                            "- 20% (vinte por cento), no imóvel situado em área de campos gerais;
+
+    20% (vinte por cento) do terreno reservado para Área de Preservação Permanente</string>
+
+    <string name="agua">- 30 (trinta) metros, para os cursos d’água de menos de 10 (dez) metros de largura;\n" +
+                            "\n" +
+                            "- 50 (cinquenta) metros, para os cursos d’água que tenham de 10 (dez) a 50 (cinquenta) metros de largura;\n" +
+                            "\n" +
+                            "- 100 (cem) metros, para os cursos d’água que tenham de 50 (cinquenta) a 200 (duzentos) metros de largura;\n" +
+                            "\n" +
+                            "- 200 (duzentos) metros, para os cursos d’água que tenham de 200 (duzentos) a 600 (seiscentos) metros de largura;\n" +
+                            "\n" +
+                            "- 500 (quinhentos) metros, para os cursos d’água que tenham largura superior a 600 (seiscentos) metros;</string>
+    <string name="lnatural">- 100 (cem) metros, em zonas rurais, exceto para o corpo d’água com até 20 (vinte) " +
+                            "hectares de superfície, cuja faixa marginal será de 50 (cinquenta) metros;\n" +
+                            "\n" +
+                            "- 30 (trinta) metros, em zonas urbanas;</string>
+    <string name="lartificial">- Não será exigida Área de Preservação Permanente no entorno de reservatórios artificiais " +
+                            "de água que não decorram de barramento ou represamento de cursos d’água naturais.\n" +
+                            "\n" +
+                            "- Nas acumulações naturais ou artificiais de água com superfície inferior a 1 (um) hectare, fica dispensada " +
+                            "a reserva da faixa de proteção prevista nos incisos II e III do caput , vedada nova supressão de áreas de vegetação " +
+                            "nativa, salvo autorização do órgão ambiental competente do Sistema Nacional do Meio Ambiente - Sisnama.\n</string>
+</resources>

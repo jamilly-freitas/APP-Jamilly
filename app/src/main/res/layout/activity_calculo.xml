@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo1"
+    tools:context=".Calculo">
+
+
+    <ScrollView
+        android:layout_width="341dp"
+        android:layout_height="659dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/txtNome"
+                android:layout_width="348dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:hint="Seu nome"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/txtNomePro"
+                android:layout_width="348dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Nome da propriedade"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/txtAreaPro"
+                android:layout_width="347dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Área da Propriedade (Hectare)"
+                android:inputType="textPersonName|numberDecimal"
+                android:textColor="#090000"
+                android:textColorHint="@color/black" />
+
+            <TextView
+                android:id="@+id/propAmazonia"
+                android:layout_width="346dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="10dp"
+                android:text="Sua propriedade está localizada na Amazonia Legal?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#050000"
+                android:textSize="18sp"
+                app:autoSizeTextType="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAreaPro"
+                app:layout_constraintVertical_bias="0.015" />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="300dp"
+                android:layout_height="72dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.472"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/propAmazonia"
+                app:layout_constraintVertical_bias="0.0">
+
+                <RadioButton
+                    android:id="@+id/rbtnSim1"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="100dp"
+                    android:text="@string/sim"
+                    app:buttonTint="@color/black"
+                    tools:text="@string/sim" />
+
+                <RadioButton
+                    android:id="@+id/rbtnNao1"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nao"
+                    app:buttonTint="@color/black"
+                    tools:text="@string/nao" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/cursoDagua"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Possui cursos d'agua na sua propriedade?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#050000"
+                android:textSize="18sp"
+                app:autoSizeTextType="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_width="297dp"
+                android:layout_height="71dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.518"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cursoDagua"
+                app:layout_constraintVertical_bias="0.0">
+
+                <RadioButton
+                    android:id="@+id/rbtnSim2"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="100dp"
+                    android:text="@string/sim"
+                    app:buttonTint="@color/black"
+                    tools:text="@string/sim" />
+
+                <RadioButton
+                    android:id="@+id/rbtnNao2"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nao"
+                    app:buttonTint="@color/black"
+                    tools:text="@string/nao" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lagoNatural2"
+                android:layout_width="352dp"
+                android:layout_height="48dp"
+                android:text="Possui lago ou lagoa natural na sua propriedade?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#050000"
+                android:textSize="18sp"
+                app:autoSizeTextType="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RadioGroup
+                android:id="@+id/rg3"
+                android:layout_width="299dp"
+                android:layout_height="72dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lagoNatural2"
+                app:layout_constraintVertical_bias="0.0">
+
+                <RadioButton
+                    android:id="@+id/rbtnSim3"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="100dp"
+                    android:text="@string/sim"
+                    app:buttonTint="@color/black"
+                    tools:text="@string/sim" />
+
+                <RadioButton
+                    android:id="@+id/rbtnNao3"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nao"
+                    app:buttonTint="@color/black"
+                    tools:text="@string/nao" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lagoArtificial"
+                android:layout_width="346dp"
+                android:layout_height="49dp"
+                android:text="Possui lago ou lagoa artificial na sua propriedade?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#050000"
+                android:textSize="18sp"
+                app:autoSizeTextType="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.446"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <RadioGroup
+                android:id="@+id/rg4"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.524"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lagoArtificial"
+                app:layout_constraintVertical_bias="0.0">
+
+                <RadioButton
+                    android:id="@+id/rbtnSim4"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="100dp"
+                    android:shadowColor="@color/black"
+                    android:text="@string/sim"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textColorLink="@color/black"
+                    app:buttonTint="@color/black"
+                    tools:text="@string/sim" />
+
+                <RadioButton
+                    android:id="@+id/rbtnNao4"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nao"
+                    app:buttonTint="@color/black"
+                    tools:text="@string/nao" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnVoltar1"
+                android:layout_width="131dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/voltar"
+                app:backgroundTint="#5D0178"
+                tools:text="@string/voltar" />
+
+            <Button
+                android:id="@+id/btnProx1"
+                android:layout_width="131dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/proximo"
+                app:backgroundTint="#04ac58"
+                tools:text="@string/proximo" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
