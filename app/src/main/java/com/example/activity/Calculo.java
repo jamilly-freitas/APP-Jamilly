@@ -16,7 +16,8 @@ public class Calculo extends AppCompatActivity {
     RadioGroup rg1, rg2, rg3, rg4;
     RadioButton rbtnSim1, rbtnSim2, rbtnSim3, rbtnSim4, rbtnNao1, rbtnNao2, rbtnNao3, rbtnNao4;
     EditText txtNome, txtNomePro, txtAreaPro;
-    public static EditText nome, nomePro, areaPro, resp1, resp2, resp3, resp4;
+   // private static EditText nome, nomePro, areaPro;
+    private String nome, nomePro, areaPro, resp1, resp2, resp3, resp4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +44,27 @@ public class Calculo extends AppCompatActivity {
         rbtnSim4 = findViewById(R.id.rbtnSim4);
         rbtnNao4 = findViewById(R.id.rbtnNao4);
 
+
+
         CriarListenerRadio();
 
         btnProx1 = findViewById(R.id.btnProx1);
         btnProx1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                nome.setText(txtNome.getText());
-//                nomePro.setText(txtNomePro.getText());
-//                areaPro.setText(txtAreaPro.getText());
+                nome  = txtNome.getText().toString();
+                nomePro = txtNomePro.getText().toString();
+                areaPro = txtAreaPro.getText().toString();
+
                 Intent intent = new Intent(getApplicationContext(), CalculoUltimo.class);
+                intent.putExtra("nome",nome);
+                intent.putExtra("nomePro",nomePro);
+                intent.putExtra("areaPro",areaPro);
+                intent.putExtra("resp1",resp1);
+                intent.putExtra("resp2",resp2);
+                intent.putExtra("resp3",resp3);
+                intent.putExtra("resp4",resp4);
+                        
                 startActivity(intent);
             }
         });
@@ -71,46 +83,46 @@ public class Calculo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == R.id.rbtnSim1){
-                    resp1.setText("oi");
+                    resp1 = "Lalalalala";
                 } else if(checkedId == R.id.rbtnNao1){
-                    resp1.setText("oi");
+                    resp1 = "Lalalalaland";
                 }
             }
         });
 
-//        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                if(checkedId == R.id.rbtnSim2){
-//                    resp2.setText("oi2");
-//                } else if(checkedId == R.id.rbtnNao2){
-//                    resp2.setText("oi2");
-//                }
-//            }
-//        });
-//
-//        rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @SuppressLint("SetTextI18n")
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                if(checkedId == R.id.rbtnSim3){
-//                    resp3.setText("oi3");
-//                } else if(checkedId == R.id.rbtnNao3){
-//                    resp3.setText("oi3");
-//                }
-//            }
-//        });
-//
-//        rg4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                if(checkedId == R.id.rbtnSim4){
-//                    resp4.setText("oi4");
-//                } else if(checkedId == R.id.rbtnNao4){
-//                    resp4.setText("oi4");
-//                }
-//            }
-//        });
+        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.rbtnSim2){
+                    resp2  = "Lalalalala";
+                } else if(checkedId == R.id.rbtnNao2){
+                    resp2  = "Lalalalalvsvsa";
+                }
+            }
+        });
+
+        rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.rbtnSim3){
+                    resp3 = "Lalalalala";
+                } else if(checkedId == R.id.rbtnNao3){
+                    resp3  = "Lalalalalannds";
+                }
+            }
+        });
+
+        rg4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.rbtnSim4){
+                    resp4  = "Lalalalala";
+                } else if(checkedId == R.id.rbtnNao4){
+                    resp4  = "Lalalalalands";
+                }
+            }
+        });
     }
 
 }
