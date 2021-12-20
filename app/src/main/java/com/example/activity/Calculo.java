@@ -104,7 +104,7 @@ public class Calculo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == R.id.rbtnSim2){
-                    resp2  = "Propriedade que possui cursos d'agua com largura mínima de:";
+                    resp2  = "Propriedade que possui cursos d'agua precisam reservar faixa de mata cíliar com largura de:";
                     aux2 = true;
                 } else if(checkedId == R.id.rbtnNao2){
                     resp2  = "Propriedade não possui cursos d'agua";
@@ -131,9 +131,8 @@ public class Calculo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == R.id.rbtnSim4){
-                    resp4  = "Propriedade que possui lago ou lagoa ártificial é obrigatória a aquisição de" +
-                            " Áreas de Preservação Permanente criadas em seu entorno observando-se a faixa mínima de 30" +
-                            " (trinta) metros e máxima de 100 (cem) metros";
+                    resp4  = "Propriedade que possui lago ou lagoa ártificial com superfície inferior" +
+                            " a 1 (um) hectare, fica dispensada a reserva da faixa de proteção";
                     aux4 = true;
                 } else if(checkedId == R.id.rbtnNao4){
                     resp4  = "Propriedade não possui lago ou lagoa ártificial";
