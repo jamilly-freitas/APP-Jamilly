@@ -20,7 +20,7 @@
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="98dp"
+                android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:text="@string/nome"
                 android:textAllCaps="false"
@@ -35,7 +35,7 @@
 
             <TextView
                 android:id="@+id/txtRespNome"
-                android:layout_width="246dp"
+                android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:textAllCaps="false"
                 android:textColor="#000000"
@@ -60,11 +60,11 @@
                 app:layout_constraintHorizontal_bias="0.134"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.22" />
+                app:layout_constraintVertical_bias="0.064" />
 
             <TextView
                 android:id="@+id/txtRespNomeP"
-                android:layout_width="246dp"
+                android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:scrollHorizontally="false"
                 android:textAllCaps="false"
@@ -94,7 +94,7 @@
 
             <TextView
                 android:id="@+id/txtRespArea"
-                android:layout_width="198dp"
+                android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:textAllCaps="false"
                 android:textColor="#000000"
@@ -108,8 +108,8 @@
 
             <TextView
                 android:id="@+id/txtResp1"
-                android:layout_width="166dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
@@ -118,9 +118,24 @@
                 app:layout_constraintVertical_bias="0.411" />
 
             <TextView
+                android:id="@+id/txtPorcent20"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:id="@+id/txtPorcent35"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:id="@+id/txtPorcent80"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
                 android:id="@+id/txtResp2"
-                android:layout_width="166dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
@@ -129,9 +144,34 @@
                 app:layout_constraintVertical_bias="0.528" />
 
             <TextView
+                android:id="@+id/txtCurso1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:id="@+id/txtCurso2"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:id="@+id/txtCurso3"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:id="@+id/txtCurso4"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:id="@+id/txtCurso5"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
                 android:id="@+id/txtResp3"
-                android:layout_width="166dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
@@ -140,9 +180,14 @@
                 app:layout_constraintVertical_bias="0.624" />
 
             <TextView
+                android:id="@+id/txtNatu"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <TextView
                 android:id="@+id/txtResp4"
-                android:layout_width="166dp"
-                android:layout_height="41dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
@@ -154,6 +199,9 @@
                 android:id="@+id/btnVoltar2"
                 android:layout_width="131dp"
                 android:layout_height="46dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/voltar"
                 app:backgroundTint="#5D0178"
                 app:layout_constraintBottom_toBottomOf="parent"

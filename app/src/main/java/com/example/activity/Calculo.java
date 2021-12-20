@@ -16,8 +16,8 @@ public class Calculo extends AppCompatActivity {
     RadioGroup rg1, rg2, rg3, rg4;
     RadioButton rbtnSim1, rbtnSim2, rbtnSim3, rbtnSim4, rbtnNao1, rbtnNao2, rbtnNao3, rbtnNao4;
     EditText txtNome, txtNomePro, txtAreaPro;
-   // private static EditText nome, nomePro, areaPro;
     private String nome, nomePro, areaPro, resp1, resp2, resp3, resp4;
+    private boolean dados, aux1, aux2, aux3, aux4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,20 +52,28 @@ public class Calculo extends AppCompatActivity {
         btnProx1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nome  = txtNome.getText().toString();
-                nomePro = txtNomePro.getText().toString();
-                areaPro = txtAreaPro.getText().toString();
+                if(dados = true) {
+                    nome = txtNome.getText().toString();
+                    nomePro = txtNomePro.getText().toString();
+                    areaPro = txtAreaPro.getText().toString();
 
-                Intent intent = new Intent(getApplicationContext(), CalculoUltimo.class);
-                intent.putExtra("nome",nome);
-                intent.putExtra("nomePro",nomePro);
-                intent.putExtra("areaPro",areaPro);
-                intent.putExtra("resp1",resp1);
-                intent.putExtra("resp2",resp2);
-                intent.putExtra("resp3",resp3);
-                intent.putExtra("resp4",resp4);
-                        
-                startActivity(intent);
+                    Intent intent = new Intent(getApplicationContext(), CalculoUltimo.class);
+                    intent.putExtra("nome", nome);
+                    intent.putExtra("nomePro", nomePro);
+                    intent.putExtra("areaPro", areaPro);
+                    intent.putExtra("resp1", resp1);
+                    intent.putExtra("resp2", resp2);
+                    intent.putExtra("resp3", resp3);
+                    intent.putExtra("resp4", resp4);
+                    intent.putExtra("aux1", aux1);
+                    intent.putExtra("aux2", aux2);
+                    intent.putExtra("aux3", aux3);
+                    intent.putExtra("aux4", aux4);
+
+                    startActivity(intent);
+                }else {
+
+                }
             }
         });
 
@@ -83,9 +91,11 @@ public class Calculo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == R.id.rbtnSim1){
-                    resp1 = "Lalalalala";
+                    resp1 = "Propriedade localizada na Amazonia Legal";
+                    aux1 = true;
                 } else if(checkedId == R.id.rbtnNao1){
-                    resp1 = "Lalalalaland";
+                    resp1 = "Propriedade localizada nas demais regiões do País";
+                    aux1 = false;
                 }
             }
         });
@@ -94,9 +104,11 @@ public class Calculo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == R.id.rbtnSim2){
-                    resp2  = "Lalalalala";
+                    resp2  = "Propriedade que possui cursos d'agua com largura mínima de:";
+                    aux2 = true;
                 } else if(checkedId == R.id.rbtnNao2){
-                    resp2  = "Lalalalalvsvsa";
+                    resp2  = "Propriedade não possui cursos d'agua";
+                    aux2 = false;
                 }
             }
         });
@@ -106,9 +118,11 @@ public class Calculo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == R.id.rbtnSim3){
-                    resp3 = "Lalalalala";
+                    resp3 = "Propriedade que possui lago ou lagoa natural com largura mínima de:";
+                    aux3 = true;
                 } else if(checkedId == R.id.rbtnNao3){
-                    resp3  = "Lalalalalannds";
+                    resp3  = "Propriedade não possui lago ou lagoa natural";
+                    aux3 = false;
                 }
             }
         });
@@ -117,12 +131,24 @@ public class Calculo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId == R.id.rbtnSim4){
-                    resp4  = "Lalalalala";
+                    resp4  = "Propriedade que possui lago ou lagoa ártificial é obrigatória a aquisição de" +
+                            " Áreas de Preservação Permanente criadas em seu entorno observando-se a faixa mínima de 30" +
+                            " (trinta) metros e máxima de 100 (cem) metros";
+                    aux4 = true;
                 } else if(checkedId == R.id.rbtnNao4){
-                    resp4  = "Lalalalalands";
+                    resp4  = "Propriedade não possui lago ou lagoa ártificial";
+                    aux4 = false;
                 }
             }
         });
     }
 
+    private boolean checarDados(){
+        if(nome.equals("") || nomePro.equals("") || areaPro.equals("") || resp1.equals("") || resp2.equals("") || resp3.equals("") || resp4.equals("")){
+            dados = false;
+        }else{
+            dados = true;
+        }
+        return dados;
+    }
 }
