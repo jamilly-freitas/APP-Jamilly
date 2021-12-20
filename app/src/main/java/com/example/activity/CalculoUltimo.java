@@ -35,7 +35,7 @@ public class CalculoUltimo extends AppCompatActivity {
         txtResp3= findViewById(R.id.txtResp3);
         txtResp4= findViewById(R.id.txtResp4);
 
-        double valor = Double.parseDouble(txtRespArea.toString());
+        double valor = Double.parseDouble(txtRespArea.getText().toString());
 
         txtPorcent80 = findViewById(R.id.txtPorcent80);
         txtPorcent35 = findViewById(R.id.txtPorcent35);

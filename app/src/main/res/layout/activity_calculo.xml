@@ -100,6 +100,7 @@
                     android:id="@+id/rbtnNao1"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="@string/nao"
                     app:buttonTint="@color/black"
                     tools:text="@string/nao" />
@@ -147,6 +148,7 @@
                     android:id="@+id/rbtnNao2"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="@string/nao"
                     app:buttonTint="@color/black"
                     tools:text="@string/nao" />
@@ -196,6 +198,7 @@
                     android:id="@+id/rbtnNao3"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="@string/nao"
                     app:buttonTint="@color/black"
                     tools:text="@string/nao" />
@@ -248,33 +251,41 @@
                     android:id="@+id/rbtnNao4"
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:text="@string/nao"
                     app:buttonTint="@color/black"
                     tools:text="@string/nao" />
             </RadioGroup>
 
-            <Button
-                android:id="@+id/btnVoltar1"
-                android:layout_width="131dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/voltar"
-                app:backgroundTint="#5D0178"
-                tools:text="@string/voltar" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/btnProx1"
-                android:layout_width="131dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="30dp"
-                android:text="@string/proximo"
-                app:backgroundTint="#04ac58"
-                tools:text="@string/proximo" />
+                <Button
+                    android:id="@+id/btnProx1"
+                    android:layout_width="131dp"
+                    android:layout_height="46dp"
+                    android:text="@string/proximo"
+                    app:backgroundTint="#04ac58"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnVoltar1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:text="@string/proximo" />
+
+                <Button
+                    android:id="@+id/btnVoltar1"
+                    android:layout_width="131dp"
+                    android:layout_height="46dp"
+                    android:text="@string/voltar"
+                    app:backgroundTint="#5D0178"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnProx1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteY="7dp"
+                    tools:text="@string/voltar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>

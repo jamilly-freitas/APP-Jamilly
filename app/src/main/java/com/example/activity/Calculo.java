@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class Calculo extends AppCompatActivity {
     Button btnProx1, btnVoltar1;
@@ -47,16 +48,17 @@ public class Calculo extends AppCompatActivity {
 
 
         CriarListenerRadio();
+        iniciaVariaveis();
 
         btnProx1 = findViewById(R.id.btnProx1);
         btnProx1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(dados = true) {
-                    nome = txtNome.getText().toString();
-                    nomePro = txtNomePro.getText().toString();
-                    areaPro = txtAreaPro.getText().toString();
+                nome = txtNome.getText().toString();
+                nomePro = txtNomePro.getText().toString();
+                areaPro = txtAreaPro.getText().toString();
 
+                if(checarDados() == true) {
                     Intent intent = new Intent(getApplicationContext(), CalculoUltimo.class);
                     intent.putExtra("nome", nome);
                     intent.putExtra("nomePro", nomePro);
@@ -72,7 +74,7 @@ public class Calculo extends AppCompatActivity {
 
                     startActivity(intent);
                 }else {
-
+                    Toast.makeText(getApplicationContext(), "Os dados não foram todos preenchidos", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -86,6 +88,17 @@ public class Calculo extends AppCompatActivity {
             }
         });
     }
+    private void iniciaVariaveis(){
+        resp1 = "Propriedade localizada nas demais regiões do País";
+        resp2 = "Propriedade não possui cursos d'agua";
+        resp3 = "Propriedade não possui lago ou lagoa natural";
+        resp4 = "Propriedade não possui lago ou lagoa ártificial";
+        aux1 = false;
+        aux2 = false;
+        aux3 = false;
+        aux4 = false;
+    }
+
     private void CriarListenerRadio(){
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -93,12 +106,13 @@ public class Calculo extends AppCompatActivity {
                 if(checkedId == R.id.rbtnSim1){
                     resp1 = "Propriedade localizada na Amazonia Legal";
                     aux1 = true;
-                } else if(checkedId == R.id.rbtnNao1){
+                } else {
                     resp1 = "Propriedade localizada nas demais regiões do País";
                     aux1 = false;
                 }
             }
         });
+
 
         rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -106,7 +120,7 @@ public class Calculo extends AppCompatActivity {
                 if(checkedId == R.id.rbtnSim2){
                     resp2  = "Propriedade que possui cursos d'agua precisam reservar faixa de mata cíliar com largura de:";
                     aux2 = true;
-                } else if(checkedId == R.id.rbtnNao2){
+                } else {
                     resp2  = "Propriedade não possui cursos d'agua";
                     aux2 = false;
                 }
@@ -120,7 +134,7 @@ public class Calculo extends AppCompatActivity {
                 if(checkedId == R.id.rbtnSim3){
                     resp3 = "Propriedade que possui lago ou lagoa natural com largura mínima de:";
                     aux3 = true;
-                } else if(checkedId == R.id.rbtnNao3){
+                } else {
                     resp3  = "Propriedade não possui lago ou lagoa natural";
                     aux3 = false;
                 }
@@ -134,7 +148,7 @@ public class Calculo extends AppCompatActivity {
                     resp4  = "Propriedade que possui lago ou lagoa ártificial com superfície inferior" +
                             " a 1 (um) hectare, fica dispensada a reserva da faixa de proteção";
                     aux4 = true;
-                } else if(checkedId == R.id.rbtnNao4){
+                } else {
                     resp4  = "Propriedade não possui lago ou lagoa ártificial";
                     aux4 = false;
                 }
@@ -142,12 +156,13 @@ public class Calculo extends AppCompatActivity {
         });
     }
 
+
     private boolean checarDados(){
-        if(nome.equals("") || nomePro.equals("") || areaPro.equals("") || resp1.equals("") || resp2.equals("") || resp3.equals("") || resp4.equals("")){
-            dados = false;
+        if(nome.isEmpty() || nomePro.isEmpty() || areaPro.isEmpty() ){
+            return  false;
         }else{
-            dados = true;
+            return  true;
         }
-        return dados;
+
     }
 }
